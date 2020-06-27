@@ -1,0 +1,10 @@
+Package: com.0xkuj.sirittl
+Name: Siri TTL
+Depends: mobilesubstrate
+Architecture: iphoneos-arm
+Description: Set siri timer for dismiss
+Maintainer: 0xkuj
+Author: 0xkuj
+Section: Tweaks
+Version: 1.0
+Installed-Size: 282
