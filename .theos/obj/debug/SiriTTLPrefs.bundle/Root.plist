@@ -24,7 +24,7 @@
 			<key>label</key>
 			<string>Tweak Enabled</string>
 			<key>nestedEntryCount</key>
-			<integer>2</integer>
+			<integer>5</integer>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -58,6 +58,52 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
+			<string>LOCKSCREEN DURATION</string>
+			<key>footerText</key>
+			<string>Setting above slider to 0 means siri won't get dismissed in lockscreen</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.0xkuj.sirittlprefs</string>
+			<key>key</key>
+			<string>lockscreenDurationEnabled</string>
+			<key>PostNotification</key>
+			<string>com.0xkuj.sirittlprefs.settingschanged</string>
+			<key>label</key>
+			<string>Lockscreen Individual Duration</string>
+			<key>nestedEntryCount</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>5.0</real>
+			<key>min</key>
+			<real>0.0</real>
+			<key>max</key>
+			<real>60.0</real>
+			<key>showValue</key>
+			<true/>
+			<key>isSegmented</key>
+			<true/>
+			<key>segmentCount</key>
+			<integer>60</integer>
+			<key>defaults</key>
+			<string>com.0xkuj.sirittlprefs</string>
+			<key>key</key>
+			<string>siriLSDuration</string>
+			<key>PostNotification</key>
+			<string>com.0xkuj.sirittlprefs.settingschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
 			<string>ABOUT ME</string>
 		</dict>
 		<dict>
@@ -84,7 +130,7 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Made by: 0xkuj | v1.0</string>
+			<string>Made by: 0xkuj | v1.1</string>
 		</dict>
 	</array>
 	<key>title</key>
