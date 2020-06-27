@@ -1,4 +1,5 @@
 #define PLIST_PATH @"/var/mobile/Library/Preferences/com.0xkuj.sirittlprefs.plist"
+#define LOCKSCREEN 10 /* we are in lockscreen */
 static BOOL isEnabled;
 static BOOL lockscreenDurationEnabled;
 static float siriDuration;
@@ -46,12 +47,12 @@ static BOOL isCurrentlyIdle = NO;
 
     if (isSiriIdle) {
 		//if we wish to cancel the tweak on lockscreen when device is locked / unlocked
-		if (lockscreenDurationEnabled && siriLSDuration == 0 && currLockState == 3) {
+		if (lockscreenDurationEnabled && siriLSDuration == 0 && currLockState == LOCKSCREEN) {
 			return;
 		}
 		float finalDuration;
 		//lockstate == 3 means device is locked / unlocked but we are in lockscreen
-		finalDuration = (currLockState == 3 && lockscreenDurationEnabled) ?
+		finalDuration = (currLockState == LOCKSCREEN && lockscreenDurationEnabled) ?
 							siriLSDuration : siriDuration;
 		
 
@@ -97,7 +98,7 @@ static BOOL isCurrentlyIdle = NO;
 -(void)_updateLockState{
  %orig;
  if ([self lockState] == 3 || [self lockState] == 1) {
-	  currLockState = 3;
+	  currLockState = LOCKSCREEN;
  }
  else {
 	currLockState = 0;
