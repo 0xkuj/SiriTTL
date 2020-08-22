@@ -1,3 +1,6 @@
+/* This tweak dismiss siri when in idle mode (not talking or listening) after
+ * configurable time 
+ * Created by: 0xkuj */
 #define PLIST_PATH @"/var/mobile/Library/Preferences/com.0xkuj.sirittlprefs.plist"
 #define LOCKSCREEN 10 /* we are in lockscreen */
 static BOOL isEnabled;
