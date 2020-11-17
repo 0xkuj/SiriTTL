@@ -2,6 +2,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = SiriTTL
 SiriTTL_FILES = Tweak.xm
+SiriTTL_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 
